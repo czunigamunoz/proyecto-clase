@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">colombina</string>
+    <string name="logo_description">Logo Empresa</string>
+    <string name="btn_registrar">Registrar Producto</string>
+    <string name="btn_logout">Cerrar Sesión</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtCategoria">Categoria</string>
 </resources>

@@ -8,13 +8,19 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <ImageView
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".40"
-        android:paddingStart="20sp"
-        android:paddingEnd="20sp"
-        android:src="@mipmap/box"/>
+        android:padding="50px">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/box"
+            android:contentDescription="@string/logo_description"
+            />
+    </LinearLayout>
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"

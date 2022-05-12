@@ -14,12 +14,15 @@
         android:theme="@style/Theme.Colombina"
         tools:targetApi="31">
         <activity
+            android:name=".Producto"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
