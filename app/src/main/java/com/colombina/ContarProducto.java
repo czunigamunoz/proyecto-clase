@@ -3,6 +3,7 @@ package com.colombina;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,10 +53,11 @@ public class ContarProducto extends AppCompatActivity implements SensorEventList
 
     Spinner sp_producto;
 
-    TextView txt_cantidad, txt_categoria, txt_contador, txt_aprobo;
+    TextView txt_cantidad, txt_categoria, txt_contador, txt_aprobo, txt_estatico;
     TextInputEditText txt_pedido;
 
     Button btn_iniciar, btn_finalizar;
+    ImageButton btn_atras;
 
     String categoria = "";
     String producto = "";
@@ -91,9 +94,11 @@ public class ContarProducto extends AppCompatActivity implements SensorEventList
         txt_contador = findViewById(R.id.textContador);
         txt_pedido = findViewById(R.id.txtPedido);
         txt_aprobo = findViewById(R.id.textAprobo);
+        txt_estatico = findViewById(R.id.textStatic);
 
         btn_iniciar = findViewById(R.id.btnIniciar);
         btn_finalizar = findViewById(R.id.btnFinalizar);
+        btn_atras = findViewById(R.id.btnatras);
 
         inicializarFirebase();
         spinnerProducto();
@@ -114,6 +119,15 @@ public class ContarProducto extends AppCompatActivity implements SensorEventList
             public void onClick(View view) {
                 iniciarConteo();
 
+            }
+        });
+
+        btn_atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ContarProducto.this, Home.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -218,9 +232,14 @@ public class ContarProducto extends AppCompatActivity implements SensorEventList
             txt_pedido.setError("Requerido");
             txt_pedido.requestFocus();
         }else {
+            txt_contador.setText("0");
+            var1 = 0;
+            var2 = 0;
+
             btn_iniciar.setVisibility(View.GONE);
             btn_finalizar.setVisibility(View.VISIBLE);
             txt_aprobo.setVisibility(View.GONE);
+            txt_estatico.setVisibility(View.GONE);
             txt_contador.setVisibility(View.VISIBLE);
             consultarProducto();
         }

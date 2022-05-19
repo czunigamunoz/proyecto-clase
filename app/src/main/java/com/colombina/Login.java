@@ -32,13 +32,18 @@ public class Login extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN = 1;
     String TAG = "GoogleSingInLoginActivity";
-
+    LinearLayout linear_error, linear_exito;
 
     LinearLayout btnIniciarGoogle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        linear_error = (LinearLayout) findViewById(R.id.ll_no_authenticated);
+        linear_exito = (LinearLayout) findViewById(R.id.ll_authenticated);
+
+
 
         btnIniciarGoogle = findViewById(R.id.btnGoogle);
 

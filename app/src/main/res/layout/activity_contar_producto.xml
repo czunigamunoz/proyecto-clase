@@ -33,14 +33,14 @@
                 android:textColor="@android:color/white" />
 
             <ImageButton
-                android:id="@+id/btnLogout"
+                android:id="@+id/btnatras"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_logout_45"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:layout_marginEnd="15sp"/>
+                android:layout_marginEnd="15sp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_logout_45" />
 
         </RelativeLayout>
 
@@ -123,7 +123,8 @@
             <Spinner
                 android:id="@+id/spProducto"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp" />
 
 
         </LinearLayout>
@@ -175,7 +176,17 @@
                 android:id="@+id/textContador"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
+                android:text="0"
+                android:textSize="40sp"
+                tools:layout_editor_absoluteX="152dp"
+                tools:layout_editor_absoluteY="414dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/textStatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
                 android:textSize="40sp"
                 tools:layout_editor_absoluteX="152dp"
                 tools:layout_editor_absoluteY="414dp" />

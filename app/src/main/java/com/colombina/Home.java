@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,7 +42,8 @@ public class Home extends AppCompatActivity {
 
     TextView texUser, texEmail;
     ImageView userImg;
-    Button btn_logout, btn_register, btn_Contar, btn_historial;
+    Button btn_register, btn_Contar, btn_historial;
+    ImageButton btn_logout;
     Usuario user;
 
     @Override
@@ -190,7 +192,6 @@ public class Home extends AppCompatActivity {
         btn_historial.setVisibility(View.GONE);
         btn_register.setVisibility(View.GONE);
         btn_Contar.setVisibility(View.GONE);
-        btn_logout.setText("REGRESAR");
         texUser.setText("Debe ingresar con el correo institucional");
         texEmail.setText("o debe ponerse en contacto con el Administrador");
 
