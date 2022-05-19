@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "464706820539",
+    "project_id": "appcolombina-20e53",
+    "storage_bucket": "appcolombina-20e53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464706820539:android:52bedebd099392e35ecc9e",
+        "android_client_info": {
+          "package_name": "com.colombina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464706820539-sjtml3rouvqnu80mjc6cc603j6c1u3ur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDznZRgIx5FPypBFCYXO9egXVV1Oq8ySIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464706820539-sjtml3rouvqnu80mjc6cc603j6c1u3ur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

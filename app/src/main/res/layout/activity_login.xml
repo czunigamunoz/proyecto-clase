@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".40"
+        android:gravity="center"
+
+        android:background="@color/blue_500"
+        >
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="40sp"
+            android:src="@mipmap/avatar"
+            android:contentDescription="@string/logo_description"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".20"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:padding="20sp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:ignore="UselessParent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/google"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/logo_description"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_login"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".30"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/colombina"
+            android:contentDescription="@string/logo_description"
+            />
+    </LinearLayout>
+
+</LinearLayout>

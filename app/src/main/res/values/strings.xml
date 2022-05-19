@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">colombina</string>
     <string name="logo_description">Logo Empresa</string>
+    <string name="btn_login">oogle</string>
     <string name="btn_registrar">Registrar Producto</string>
-    <string name="btn_logout">Cerrar Sesión</string>
+    <string name="btn_contar_producto">Contar Producto</string>
+    <string name="btn_historial_producto">Historial Producto</string>
+    <string name="btn_logout">Salir</string>
     <string name="txtNombre">Nombre</string>
     <string name="txtCategoria">Categoria</string>
+    <string name="ui_design">UI Design</string>
+    <string name="img_user">Imagen usuario</string>
+    <string name="email">Email</string>
+    <string name="user">User</string>
+    <string name="categoria">Categoria</string>
+    <string name="producto">Producto</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="pedido">Pedido</string>
+    <string name="iniciar">INICIAR</string>
+    <string name="finalizar">FINALIZAR</string>
+    <string name="error_login">Error al iniciar sesion, Comunicarse con el administrador</string>
+
+    <!--<string name="default_web_client_id">464706820539-sjtml3rouvqnu80mjc6cc603j6c1u3ur.apps.googleusercontent.com</string>-->
 </resources>
