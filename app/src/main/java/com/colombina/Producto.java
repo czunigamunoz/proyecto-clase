@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.colombina.Model.CategoriaClass;
 import com.colombina.Model.ProductoClass;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,7 +35,7 @@ public class Producto extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    EditText edt_producto, edt_cantidad, edt_precio;
+    TextInputEditText edt_producto, edt_cantidad, edt_precio;
     Spinner sp_categoria;
     Button btn_guardar_producto;
     String categoria = "";

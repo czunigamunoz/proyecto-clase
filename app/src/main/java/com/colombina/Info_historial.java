@@ -25,6 +25,6 @@ public class Info_historial extends AppCompatActivity {
         int ancho = medidasVentana.widthPixels;
         int alto = medidasVentana.heightPixels;
 
-        getWindow().setLayout((int) (ancho * 0.85) , (int)(alto * 0.7));
+        getWindow().setLayout((int) (ancho * 0.95) , (int)(alto * 0.7));
     }
 }

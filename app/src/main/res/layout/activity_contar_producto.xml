@@ -40,7 +40,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="15sp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/ic_logout_45" />
+                android:src="@drawable/ic_logout_30" />
 
         </RelativeLayout>
 
@@ -72,13 +72,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/categoria"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textCategoria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -94,13 +94,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cantidad"
-                    android:textSize="20sp"/>
+                    android:textSize="15sp"/>
 
                 <TextView
                     android:id="@+id/textCantidad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -118,13 +118,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/producto"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <Spinner
                 android:id="@+id/spProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20sp" />
+                android:layout_marginStart="15sp" />
 
 
         </LinearLayout>
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/pedido"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:labelFor="@+id/txtPedido"/>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -159,7 +159,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textSize="15sp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

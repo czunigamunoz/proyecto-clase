@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.bumptech.glide.Glide;
 import com.colombina.Model.Usuario;
@@ -42,9 +44,10 @@ public class Home extends AppCompatActivity {
 
     TextView texUser, texEmail;
     ImageView userImg;
-    Button btn_register, btn_Contar, btn_historial;
+    CardView btn_register, btn_Contar, btn_historial;
     ImageButton btn_logout;
     Usuario user;
+    LinearLayout linear_aprobo, linear_denego;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,8 @@ public class Home extends AppCompatActivity {
         texUser = findViewById(R.id.txtUser);
         texEmail = findViewById(R.id.txtEmail);
         userImg = findViewById(R.id.imgUser);
+        linear_aprobo = findViewById(R.id.ll_authenticated);
+        linear_denego = findViewById(R.id.ll_no_authenticated);
 
         // Inicializar Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -192,8 +197,8 @@ public class Home extends AppCompatActivity {
         btn_historial.setVisibility(View.GONE);
         btn_register.setVisibility(View.GONE);
         btn_Contar.setVisibility(View.GONE);
-        texUser.setText("Debe ingresar con el correo institucional");
-        texEmail.setText("o debe ponerse en contacto con el Administrador");
+        linear_aprobo.setVisibility(View.GONE);
+        linear_denego.setVisibility(View.VISIBLE);
 
     }
 
