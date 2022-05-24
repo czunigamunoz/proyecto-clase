@@ -44,10 +44,10 @@ public class Home extends AppCompatActivity {
 
     TextView texUser, texEmail;
     ImageView userImg;
-    CardView btn_register, btn_Contar, btn_historial;
+    CardView btn_register, btn_Contar, btn_historial, btn_registra_user, btn_registrar_category;
     ImageButton btn_logout;
     Usuario user;
-    LinearLayout linear_aprobo, linear_denego;
+    LinearLayout linear_aprobo, linear_denego, linear_admin1, linear_admin2, linear_admin3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +59,16 @@ public class Home extends AppCompatActivity {
         btn_Contar = findViewById(R.id.btnCount);
         btn_historial = findViewById(R.id.btnHistory);
         btn_logout = findViewById(R.id.btnLogout);
+        btn_registra_user= findViewById(R.id.btnRegistrarUsuario);
+        btn_registrar_category = findViewById(R.id.btnRegistrarCategoria);
         texUser = findViewById(R.id.txtUser);
         texEmail = findViewById(R.id.txtEmail);
         userImg = findViewById(R.id.imgUser);
         linear_aprobo = findViewById(R.id.ll_authenticated);
         linear_denego = findViewById(R.id.ll_no_authenticated);
+        linear_admin1 = findViewById(R.id.llAdmin1);
+        linear_admin2 = findViewById(R.id.llAdmin2);
+        linear_admin3 = findViewById(R.id.llAdmin3);
 
         // Inicializar Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -76,11 +81,6 @@ public class Home extends AppCompatActivity {
         Global.empleado = currentUser.getDisplayName();
         Global.correo = currentUser.getEmail();
 
-        /*Usuario user1 = new Usuario();
-        user1.setUid_user(UUID.randomUUID().toString());    //el UID es aleatorio
-        user1.setCorreo2("gusi.gaus8@gmail.com");
-        user1.setRol("Administrador");
-        databaseReference.child("Usuario").child(user1.getUid_user()).setValue(user1);*/
 
 
         if(Global.correo.contains("@uniautonoma.edu.co")){
@@ -105,8 +105,11 @@ public class Home extends AppCompatActivity {
                         String rol = user.getRol();
 
                         if (!rol.equals("Administrador")){
-                            btn_historial.setVisibility(View.GONE);
-                            btn_register.setVisibility(View.GONE);
+                            linear_admin1.setVisibility(View.GONE);
+                            linear_admin2.setVisibility(View.GONE);
+                        }
+                        else{
+                            linear_admin3.setVisibility(View.GONE);
                         }
                     }else{
                         noPermiso();
@@ -146,12 +149,26 @@ public class Home extends AppCompatActivity {
                 startActivity(contarProducto);
             }
         });
-
+        //boton historial
         btn_historial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent historialProducto = new Intent(Home.this, Historial.class);
                 startActivity(historialProducto);
+            }
+        });
+        btn_registra_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registrar_user = new Intent(Home.this, registrar_usuario.class);
+                startActivity(registrar_user);
+            }
+        });
+        btn_registrar_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registar_category = new Intent(Home.this, registrar_categoria.class);
+                startActivity(registar_category);
             }
         });
 

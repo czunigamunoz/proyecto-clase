@@ -5,6 +5,13 @@ public class Usuario {
     private String correo2;
     private String rol;
 
+
+    public Usuario(String uid_user, String correo2, String rol) {
+        this.uid_user = uid_user;
+        this.correo2 = correo2;
+        this.rol = rol;
+    }
+
     public Usuario() {
     }
 
