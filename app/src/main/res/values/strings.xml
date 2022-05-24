@@ -19,6 +19,8 @@
     <string name="pedido">Pedido</string>
     <string name="iniciar">INICIAR</string>
     <string name="finalizar">FINALIZAR</string>
+    <string name="registrar_usuario">Registrar Usuario</string>
+    <string name="registrar_categoria">Registrar Categoria</string>
     <string name="error_login">Error al iniciar sesion, Comunicarse con el administrador</string>
 
     <!--<string name="default_web_client_id">464706820539-sjtml3rouvqnu80mjc6cc603j6c1u3ur.apps.googleusercontent.com</string>-->
