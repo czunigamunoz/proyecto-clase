@@ -62,17 +62,18 @@ public class registrar_usuario extends AppCompatActivity {
 
     public void guardarUsuario(){
         // traer el valor del campo correo
-        String nombre_user = txt_email.getText().toString();
+        String email = txt_email.getText().toString();
 
-        Usuario new_usuario = new Usuario();
+        Usuario usuario = new Usuario();
 
-        if (nombre_user.equals("")){
+        if (email.equals("")){
             validarCampos();
         }else {
-            if (nombre_user.contains("@uniautonoma.edu.co")){
+            if (email.contains("@uniautonoma.edu.co")){
+
                 Query queryUser = FirebaseDatabase.getInstance().getReference("Usuario")
                         .orderByChild("correo2")
-                        .equalTo(nombre_user);
+                        .equalTo(email);
 
                 queryUser.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -81,10 +82,10 @@ public class registrar_usuario extends AppCompatActivity {
                             Toast.makeText(registrar_usuario.this, "Este usuario ya esta registrado", Toast.LENGTH_SHORT).show();
                             txt_email.requestFocus();
                         }else{
-                            new_usuario.setUid_user(UUID.randomUUID().toString());
-                            new_usuario.setCorreo2(nombre_user);
-                            new_usuario.setRol(roles);
-                            databaseReference.child("Usuario").child(new_usuario.getUid_user()).setValue(new_usuario);
+                            usuario.setUid_user(UUID.randomUUID().toString());
+                            usuario.setCorreo2(email);
+                            usuario.setRol(roles);
+                            databaseReference.child("Usuario").child(usuario.getUid_user()).setValue(usuario);
                             Toast.makeText(registrar_usuario.this, "Nuevo usuario guardado", Toast.LENGTH_SHORT).show();
                             limpiarCajas();
                         }
@@ -95,6 +96,9 @@ public class registrar_usuario extends AppCompatActivity {
 
                     }
                 });
+
+
+
             }else{
                 Toast.makeText(this, "Debe ser un correo Institucional", Toast.LENGTH_LONG).show();
                 txt_email.setError("Verificar");

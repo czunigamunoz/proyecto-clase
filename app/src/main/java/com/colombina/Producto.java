@@ -127,17 +127,24 @@ public class Producto extends AppCompatActivity {
         if (producto.equals("") || cantidad.equals("") || precio.equals("")) {
             validacion();
         } else {
-            art.setUid(UUID.randomUUID().toString());    //el UID es aleatorio
-            art.setFecha(fecha());
-            art.setNombre_producto(producto);
-            art.setCategoria(categoria);
-            art.setCantidad(cantidad);
-            art.setPrecio(precio);
-            databaseReference.child("Producto").child(art.getUid()).setValue(art);
+
+            if (Integer.parseInt(cantidad) >= 1 & Integer.parseInt(precio) >= 100){
+                art.setUid(UUID.randomUUID().toString());    //el UID es aleatorio
+                art.setFecha(fecha());
+                art.setNombre_producto(producto);
+                art.setCategoria(categoria);
+                art.setCantidad(cantidad);
+                art.setPrecio(precio);
+                databaseReference.child("Producto").child(art.getUid()).setValue(art);
 
 
-            limpiarCajas();
-            Toast.makeText(this, "Se guardó correctamente el producto", Toast.LENGTH_LONG).show();
+                limpiarCajas();
+                Toast.makeText(this, "Se guardó correctamente el producto", Toast.LENGTH_LONG).show();
+            }
+            else{
+                Toast.makeText(this, "Verificar precio y cantidad", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
 
