@@ -5,6 +5,7 @@
         android:background="@drawable/bg_list_producto"
         android:padding="10sp"
         android:textColor="@color/grey_200"
+        android:textStyle="bold|italic"
         android:textSize="12sp"
         xmlns:android="http://schemas.android.com/apk/res/android" />
 
