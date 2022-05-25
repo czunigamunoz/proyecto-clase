@@ -258,64 +258,84 @@ tools:context=".Home">
                 </LinearLayout>
 
 
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
 
-                <LinearLayout
-                    android:id="@+id/llAdmin3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:visibility="gone"
-                    >
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/btnCount"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:foreground="?selectableItemBackground"
-                        android:padding="10dp"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp"
-                        app:contentPadding="4dp">
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llAdmin3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="70sp"
+                                android:layout_margin="10dp"
+                                android:src="@mipmap/bienvenido" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/btnCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:foreground="?selectableItemBackground"
+                                android:padding="10dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="8dp"
+                                app:contentPadding="4dp"
+                                android:layout_marginBottom="2sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|center_horizontal"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:src="@drawable/ic_count_80" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="@string/btn_contar_producto"
+                                        android:textAlignment="center"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="center|center_horizontal"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:gravity="bottom|center">
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:src="@drawable/ic_count_80" />
+                                android:layout_margin="10dp"
+                                android:src="@mipmap/colombina" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_horizontal"
-                                android:text="@string/btn_contar_producto"
-                                android:textAlignment="center"
-                                android:textSize="12sp"
-                                android:textStyle="bold"/>
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
 
-                </LinearLayout>
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="bottom|center">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:src="@mipmap/colombina" />
-
-
-                </LinearLayout>
+                </ScrollView>
 
             </LinearLayout>
 
