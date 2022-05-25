@@ -38,70 +38,83 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
-        android:layout_height="203dp"
+        android:layout_height="150dp"
         android:layout_marginVertical="10dp"
         android:src="@mipmap/user_add" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10sp"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/txtCategoria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/categoria"
-            android:textSize="15sp" />
-
-        <Spinner
-            android:id="@+id/spRol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10sp"
-        android:gravity="center">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtNombre"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:endIconMode="clear_text"
-            android:hint="Correo Institucional"
-            app:endIconTint="@color/blue_500"
-            app:shapeAppearance="@style/Cut"
-            android:layout_marginStart="20sp"
-            android:layout_marginEnd="20sp">
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editEmail"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:digits="abcdefghijklmnopqrstuvwxyz.@"
-                android:maxLength="60"
-                android:textSize="15sp"/>
+                android:orientation="horizontal"
+                android:padding="10sp"
+                android:gravity="center">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:id="@+id/txtCategoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria"
+                    android:textSize="15sp" />
 
-    </LinearLayout>
+                <Spinner
+                    android:id="@+id/spRol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btnGuardarUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
-        android:layout_gravity="center"
-        android:text="GUARDAR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10sp"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtNombre"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="clear_text"
+                    android:hint="Correo Institucional"
+                    app:endIconTint="@color/blue_500"
+                    app:shapeAppearance="@style/Cut"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20sp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:digits="abcdefghijklmnopqrstuvwxyz.@"
+                        android:maxLength="60"
+                        android:textSize="15sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardarUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_gravity="center"
+                android:text="GUARDAR" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
